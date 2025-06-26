@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Local Page Search</title>
+  
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="topnav">
@@ -12,8 +13,42 @@
         <a  href="news.html">News</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
-        <a class="active" href="search.html">Search</a>
-        <a href="login.html">Login</a>
+        <a href="search.html">Search</a>
+        <a class="active" href="login.html">Login</a>
         </div>
+
+<h1>Search Your Content</h1>
+<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+
+
+
+<script>
+  function searchFunction() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const items = document.querySelectorAll('#contentList li');
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(input)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+<image src="facebook-logo.png"style="width :20px;height :20px;">
+        <image src="instagram.png"style="width :20px;height :20px;">
+        <a href="https://mail.google.com/mail/u/0/#inbox">
+        <img src="gmail.png" href="https://mail.google.com/mail/u/0/#inbox" style="width :20px;height :20px;"></a>
+        <p>Follow us on social media for more updates!</p>
+        <p>Contact at Suvaan101@gmail.com </image></p>
+        <footer>
+            <p>&copy; 2025 Falcon Enthusiasts. All rights reserved.</p>
+        </footer>
+
+
+
 </body>
 </html>
+
